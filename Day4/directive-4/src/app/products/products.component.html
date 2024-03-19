@@ -1,0 +1,11 @@
+<h2>Products</h2>
+
+<input type="text" [(ngModel)]="searchText" placeholder="Search by name">
+
+<ul>
+  <li *ngFor="let product of filteredProducts">
+    {{ product.name }} - ${{ product.price }}
+    <span *ngIf="product.available; else notAvailable" style="color: green;">Available</span>
+    <ng-template #notAvailable><span style="color: red;">Not Available</span></ng-template>
+  </li>
+</ul>
