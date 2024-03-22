@@ -1,0 +1,10 @@
+<h2>Products</h2>
+
+<label for="priceThreshold">Enter price threshold:</label>
+<input type="number" id="priceThreshold" [(ngModel)]="priceThreshold">
+
+<ul>
+  <li *ngFor="let product of products" [ngStyle]="{'background-color': setBackgroundColor(product.available), 'font-size': setFontSize(product.price)}">
+    {{ product.name }} - ${{ product.price }}
+  </li>
+</ul>
