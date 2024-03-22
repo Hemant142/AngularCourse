@@ -1,0 +1,9 @@
+<h2>To-Do List</h2>
+
+<ul>
+  <li *ngFor="let todo of todos" [ngClass]="{ 'completed': todo.completed, 'incomplete': !todo.completed }">
+    <h3>{{ todo.title }}</h3>
+    <p>{{ todo.description }}</p>
+    <p>Status: {{ todo.completed ? 'Completed' : 'Incomplete' }}</p>
+  </li>
+</ul>
