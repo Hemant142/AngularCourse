@@ -1,0 +1,4 @@
+<div *ngFor="let task of tasks">
+    <app-task [task]="task" (completed)="onTaskCompleted($event, task.title)"></app-task>
+  </div>
+  
