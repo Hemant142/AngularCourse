@@ -33,6 +33,7 @@ export class DashboardComponent implements OnInit {
       product.productName.toLowerCase().includes(this.filterValue.toLowerCase())
     );
   }
+  
 
   goToProductDetail(id: number) {
     this.router.navigate(['/product', id]);
