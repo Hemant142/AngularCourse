@@ -1,0 +1,27 @@
+<h2>Product Dashboard</h2>
+
+<!-- Filter Input -->
+<input
+  type="text"
+  placeholder="Search by Product Name"
+  [(ngModel)]="filterValue"
+  (input)="applyFilter()"
+/>
+
+
+<table>
+  <thead>
+    <tr>
+      <th (click)="sort('productName')">Product Name</th>
+      <th (click)="sort('price')">Price</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of filteredProducts">
+      <td (click)="goToProductDetail(product.id)">{{ product.productName }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.category }}</td>
+    </tr>
+  </tbody>
+</table>
