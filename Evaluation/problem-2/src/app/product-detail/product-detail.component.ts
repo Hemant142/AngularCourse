@@ -18,12 +18,12 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const idString: string | null = params.get('id'); // Retrieve id as string or null
+      const idString: string | null = params.get('id'); 
       if (idString !== null) {
-        const id: number = +idString; // Convert id string to number
-        if (!isNaN(id)) { // Check if id is a valid number
+        const id: number = +idString; 
+        if (!isNaN(id)) { 
           this.dataService.getProductDetail(id).subscribe(data => {
-            this.product = data; // Assign product details to product variable
+            this.product = data; 
           }, error => {
             console.error('Error retrieving product details:', error);
           });
