@@ -5,12 +5,13 @@
     <div *ngIf="data">
       <h2>Data Details</h2>
       <div *ngFor="let item of data">
-        <div>
+        <div class="container">
+          <img src="{{ item.avatar }}" alt="Avatar" width="50" height="50">
           <p><strong>ID:</strong> {{ item.id }}</p>
           <p><strong>Email:</strong> {{ item.email }}</p>
           <p><strong>First Name:</strong> {{ item.first_name }}</p>
           <p><strong>Last Name:</strong> {{ item.last_name }}</p>
-          <img src="{{ item.avatar }}" alt="Avatar" width="50" height="50">
+         
         </div>
       </div>
     </div>
